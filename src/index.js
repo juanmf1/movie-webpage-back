@@ -5,6 +5,7 @@ const cors = require("cors");
 const session = require("express-session");
 const FileStore = require("session-file-store")(session);
 
+const PORT = 8000;
 
 // HAY QUE PONERLO ARRIBA PORQUE SINO NO LEE JSON EN LAS RUTAS DE ABAJO
 
@@ -32,4 +33,4 @@ app.use("/auth", authRoutes);
 app.use("/user", userRoutes);
 app.use ("/favoritos", favoritosRoutes);
 
-app.listen(8000);
+app.listen(process.env.PORT || PORT);
