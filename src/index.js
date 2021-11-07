@@ -5,7 +5,6 @@ const cors = require("cors");
 const session = require("express-session");
 const FileStore = require("session-file-store")(session);
 
-const PORT = 8000;
 
 // HAY QUE PONERLO ARRIBA PORQUE SINO NO LEE JSON EN LAS RUTAS DE ABAJO
 
@@ -21,7 +20,7 @@ app.use(
   })
 );
 
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors({ credentials: true, origin: "https://silly-mirzakhani-5a3505.netlify.app/" }));
 
 // RUTAS
 const authRoutes = require("./routes/auth");
@@ -33,4 +32,4 @@ app.use("/auth", authRoutes);
 app.use("/user", userRoutes);
 app.use ("/favoritos", favoritosRoutes);
 
-app.listen(process.env.PORT || PORT);
+app.listen(8000);
