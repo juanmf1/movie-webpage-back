@@ -21,7 +21,7 @@ app.use(
   })
 );
 
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors({ credentials: true, origin: "https://silly-mirzakhani-5a3505.netlify.app/" }));
 
 // RUTAS
 const authRoutes = require("./routes/auth");
