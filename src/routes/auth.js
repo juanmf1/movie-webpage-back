@@ -26,7 +26,7 @@ router.post('/', (req, res) => {
             if (result.length === 1){
                 const nombre = `${result[0].nombre} ${result[0].apellido}`;
 
-                req.session.user = {
+                req.session.user  = {
                     name: nombre,
                     id: result[0].id,
                 };
