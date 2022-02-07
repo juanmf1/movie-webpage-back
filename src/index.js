@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 
-app.use(cors({credentials:true, origin: 'https://silly-mirzakhani-5a3505.netlify.app/'}));
+app.use(cors({credentials:true, origin: 'https://silly-mirzakhani-5a3505.netlify.app'}));
 
 app.use(
   session({
