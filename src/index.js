@@ -33,4 +33,4 @@ app.use("/auth", authRoutes);
 app.use("/user", userRoutes);
 app.use ("/favoritos", favoritosRoutes);
 
-app.listen(8000);
+app.listen(process.env.PORT ||8000);
