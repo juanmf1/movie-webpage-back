@@ -11,6 +11,8 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 
+app.use(cors());
+
 app.use(
   session({
     secret: "635241",
@@ -21,7 +23,6 @@ app.use(
   })
 );
 
-app.use(cors());
 
 // RUTAS
 const authRoutes = require("./routes/auth");
